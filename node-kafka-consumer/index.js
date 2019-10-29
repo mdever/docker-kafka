@@ -5,7 +5,7 @@ let client = new kafka.KafkaClient({
 
 
 let consumer = new kafka.Consumer(client,
-                                  [{topic: 'testTopic'}]);
+                                  [{topic: 'TestTopic'}]);
 
 console.log('Beginning to listen to topic `testTopic`');
 
