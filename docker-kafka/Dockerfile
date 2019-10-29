@@ -17,6 +17,8 @@ RUN mv kafka_2.11-2.1.1/* /usr/local/kafka
 
 COPY start-kafka.sh /usr/local/kafka/bin/
 
+EXPOSE 9092/tcp
+
 RUN chmod 755 /usr/local/kafka/bin/start-kafka.sh
 
 CMD "/usr/local/kafka/bin/start-kafka.sh"
