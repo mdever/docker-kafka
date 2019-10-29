@@ -22,14 +22,14 @@ java -jar target\java-kafka-consumer-0.0.1-shaded.jar
 
 ## Kafka Image
 
-docker run -it -v <path-to-local-logs>:/tmp/kafka -p 9092:9092 docker-kafka
+docker run -it -v $LOCAL\_LOGS\_DIRECTORY:/tmp/kafka -p 9092:9092 docker-kafka
 
 
 # Creating new topics
 
 You will need to shell in to the running docker image
 
-docker exec -it <image_hash> /bin/bash
+docker exec -it <image-hash> /bin/bash
 cd /usr/local/kakfa
 bin/kafka-topics.sh --create --zookeeper localhost:2181 --partitions 1 --replication-factor 1 --topic <my-topic-name>
 
